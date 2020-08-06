@@ -1,0 +1,14 @@
+.imgcontainer{
+    background-color: azure;
+
+}
+.imgs img{
+    border-radius: 15px;
+    border: solid white 5px;
+}
+.featuredimg img{
+
+    border-radius: 15px;
+    border: solid white 5px;
+    border-bottom-width: 4px;
+}
