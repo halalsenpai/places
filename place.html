@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <script src="/script.js"></script>
 </head>
 <link rel="stylesheet" href="places.css">
 <body>
             <div class="container">
    <!--name and place and share btn  -->
-                <h1 id="placeName">Lorem ipsum</h1>
+                <h1 id="placeName">The Venue</h1>
                 <div class="d-flex justify-content-between">
                     <a href="#">Karachi, Sindh, Pakistan</a><a href="#">Share</a>
                  </div>
@@ -45,9 +46,10 @@
                     </div>
 
                     <!-- grid template -->
-                    <div class="gridtemp">
-                        <div class="layout">kjbvkjvbkjb</div>
-                        <div class="map">dhvbhdsvh</div>
+                    <div class="row">
+                        <div class="layout col-lg-5">Lorem ipsum dolor sit amet. <br>Lorem ipsum dolor sit amet consectetur. <br>Lorem ipsum dolor sit.</div>
+                        
+                        <div id="googleMap" class="map col-lg-7" style="width:100%;height:400px;"></div>
                     </div>
 
                     <!-- <div class="row">
@@ -60,13 +62,121 @@
 
 
                     </div> -->
-                    
+                    <!-- <div id="googleMap" class="map" style="width:100%;height:400px;"></div> -->
+                   
+                   <hr>
+                    <section style="background: rgb(240, 255, 255); width: 100%; height: auto;">
 
+                        <form action="">
+                            <!--  General -->
+                            <div class="form-group">
+                              <h2 class="heading">Booking & contact</h2>
+                              <div class="controls">
+                                <input type="text" id="name" class="floatLabel" name="name">
+                                <label for="name">Name</label>
+                              </div>
+                              <div class="controls">
+                                <input type="text" id="email" class="floatLabel" name="email">
+                                <label for="email">Email</label>
+                              </div>       
+                              <div class="controls">
+                                <input type="tel" id="phone" class="floatLabel" name="phone">
+                                <label for="phone">Phone</label>
+                              </div>
+                                <div class="grid">
+                                  <div class="col-2-3">
+                                    <div class="controls">
+                                     <input type="text" id="street" class="floatLabel" name="street">
+                                     <label for="street">Address</label>
+                                    </div>          
+                                  </div>
+                                  <div class="col-1-3">
+                                    <div class="controls">
+                                      <input type="number" id="street-number" class="floatLabel" name="street-number">
+                                      <label for="street-number">Number</label>
+                                    </div>          
+                                  </div>
+                                </div>
+                                <div class="grid">
+                                  <div class="col-2-3">
+                                    <div class="controls">
+                                      <input type="text" id="city" class="floatLabel" name="city">
+                                      <label for="city">City</label>
+                                    </div>         
+                                  </div>
+                                  <div class="col-1-3">
+                                    <div class="controls">
+                                      <input type="text" id="post-code" class="floatLabel" name="post-code">
+                                      <label for="post-code">Alternate</label>
+                                    </div>         
+                                  </div>
+                                </div>
+
+                            </div>
+                            <!--  Details -->
+                            <div class="form-group">
+                              <h2 class="heading">Details</h2>
+                              <div class="grid">
+                              <div class="col-1-4 col-1-4-sm">
+                                <div class="controls">
+                                  <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+                                  <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;When</label>
+                                </div>      
+                              </div>
+
+                                </div>
+                                <div class="grid">
+                              <div class="col-1-3 col-1-3-sm">
+                                <div class="controls">  
+                                  <i class="fa fa-sort"></i>
+                                  <select class="floatLabel">
+                                    <option value="blank"></option>
+                                    <option value="1">100-200</option>
+                                    <option value="2" selected>200-300</option>
+                                    <option value="3">300-400</option>
+                                    <option value="3">400-500</option>
+                                  </select>
+                                  <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;Guests</label>
+                                </div>      
+                              </div>
+                              <div class="col-1-3 col-1-3-sm">
+                              <div class="controls">
+                                <i class="fa fa-sort"></i>
+                                <select class="floatLabel">
+                                  <option value="blank"></option>
+                                  <option value="deluxe" selected>One Stage</option>
+                                  <option value="Zuri-zimmer">Two Stage</option>
+                                </select>
+                                <label for="fruit">Stages</label>
+                               </div>     
+                              </div>
+                          
+                                
+                               </div>
+                                <div class="grid">
+                                  
+                                  <br>
+                                  <div class="controls">
+                                    <textarea name="comments" class="floatLabel" id="comments"></textarea>
+                                    <label for="comments">Comments</label>
+                                    </div>
+                                      
+                                </div>
+                                <div style="text-align: center;"><button type="submit" value="Submit" style="height: 50px;;">Submit</button></div>  
+                            </div> <!-- /.form-group -->
+                          </form>
+                    
+                    </section>
 
         </div>
+        
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZor1zdYvUqVxmmrHGQiD2ghiQHDRBNlM&callback=myMap"></script>
+
+        <!-- map script -->
+        
 
 
 </body>
